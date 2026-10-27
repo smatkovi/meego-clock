@@ -1,0 +1,6 @@
+*.o
+moc_*
+qrc_*
+Makefile
+.qmake.stash
+/meego-clock

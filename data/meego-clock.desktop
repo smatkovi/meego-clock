@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Name=Clock (MeeGo)
+Comment=Alarms as on the Nokia N9
+Exec=/usr/bin/meego-clock
+Icon=general_clock
+X-Osso-Type=application/x-executable

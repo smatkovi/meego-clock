@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/MainPage.qml</file>
+        <file>qml/AnalogClock.qml</file>
+        <file>qml/AlarmDelegate.qml</file>
+        <file>qml/AlarmSheet.qml</file>
+        <file>qml/OptionsSheet.qml</file>
+        <file>qml/OptionRow.qml</file>
+        <file>qml/TimePicker.qml</file>
+        <file>qml/Util.js</file>
+    </qresource>
+</RCC>
