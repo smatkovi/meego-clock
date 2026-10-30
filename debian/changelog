@@ -1,0 +1,7 @@
+meego-clock (0.1) unstable; urgency=medium
+
+  * First release: the analog clock with the home city, the alarms list,
+    the alarm editor with the two-circle time picker, repeat, snooze and
+    alarm tone options, on alarmd and clockd.
+
+ -- Sebastian Matkovich <sebastian.matkovich@gmail.com>  Fri, 30 Oct 2026 19:45:00 +0100

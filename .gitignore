@@ -4,3 +4,8 @@ qrc_*
 Makefile
 .qmake.stash
 /meego-clock
+debian/.debhelper/
+debian/meego-clock/
+debian/files
+debian/*.substvars
+debian/debhelper-build-stamp

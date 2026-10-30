@@ -1,0 +1,24 @@
+Source: meego-clock
+Section: x11
+Priority: optional
+Maintainer: Sebastian Matkovich <sebastian.matkovich@gmail.com>
+Build-Depends: debhelper-compat (= 13), qtbase5-dev, qtdeclarative5-dev,
+ libalarm-dev, libdbus-1-dev, libtime-dev, pkg-config
+Standards-Version: 4.6.2
+Homepage: https://github.com/smatkovi/meego-clock
+Rules-Requires-Root: no
+
+Package: meego-clock
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, qt-components,
+ qml-module-qtquick2, alarmd, clockd
+Description: The Nokia N9's clock for Hildon
+ The analog clock with the home city and the alarms, and the alarm editor
+ with the N9's two-circle time picker, written anew in QML with the MeeGo
+ Harmattan Qt Quick components (com.nokia.meego 2.0, the Qt 5 port of
+ qt-components) on Maemo's alarm daemon. Its alarms are the same as Maemo's
+ clock's (clock-ui) and ring with the system UI's alarm dialog.
+ .
+ The N9's theme and fonts are Nokia's and not included: without them the
+ components draw with the open base theme.
+XB-Maemo-Display-Name: Clock (MeeGo)
