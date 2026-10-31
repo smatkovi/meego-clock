@@ -2,6 +2,7 @@
 
 #include <clockd/libtime.h>
 
+#include <QDBusConnection>
 #include <QFile>
 
 #include <cstdlib>
@@ -12,6 +13,21 @@ ClockInfo::ClockInfo(QObject *parent)
     : QObject(parent)
 {
     refresh();
+    // (from any sender: where no mce runs, pro1x-standby says it)
+    QDBusConnection::systemBus().connect(QString(), QStringLiteral("/com/nokia/mce/signal"),
+                                         QStringLiteral("com.nokia.mce.signal"),
+                                         QStringLiteral("display_status_ind"), this,
+                                         SLOT(displayStatus(QString)));
+}
+
+void ClockInfo::displayStatus(const QString &state)
+{
+    const bool on = state != QLatin1String("off") && state != QLatin1String("lpm");
+
+    if (on != m_displayOn) {
+        m_displayOn = on;
+        emit displayChanged();
+    }
 }
 
 QString ClockInfo::soundDir() const

@@ -1,3 +1,13 @@
+meego-clock (0.2) unstable; urgency=medium
+
+  * The seconds hand only while the clock is seen: its 1 s timer stops
+    while the application is not in front and while mce's
+    display_status_ind says the display is off or shows the stand-by
+    screen ("off", "lpm"); no wakeup a second behind other windows or in
+    a pocket.
+
+ -- Sebastian Matkovich <sebastian.matkovich@gmail.com>  Sat, 31 Oct 2026 10:45:00 +0100
+
 meego-clock (0.1) unstable; urgency=medium
 
   * First release: the analog clock with the home city, the alarms list,

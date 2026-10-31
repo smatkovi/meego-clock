@@ -13,9 +13,11 @@ Item {
     width: 384
     height: width
 
+    // the seconds hand only while it is seen: the clock in front and the
+    // display on (no wakeup a second behind other windows or in a pocket)
     Timer {
         interval: 1000
-        running: true
+        running: Qt.application.active && clockInfo.displayOn
         repeat: true
         triggeredOnStart: true
         onTriggered: clock.now = new Date()

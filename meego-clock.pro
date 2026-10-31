@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = meego-clock
 
-QT += quick qml
+QT += quick qml dbus
 CONFIG += c++11 link_pkgconfig
 PKGCONFIG += alarm libtime
 
